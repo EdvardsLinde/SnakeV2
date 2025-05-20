@@ -1,17 +1,39 @@
+
+* {
+    font-family: 'M PLUS Rounded 1c', Arial, sans-serif;
+}
+
 body {
-    font-family: Arial, sans-serif;
     text-align: center;
     background-color: #111;
     color: white;
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-position: center;
 }
 
 canvas {
     background-color: #222;
-    border: 2px white solid;
     display: block;
     margin: 0 auto;
 }
 
 #score, #gameOverMsg {
     font-size: 20px;
+}
+
+#retryBtn {
+    background-color: #306e32;
+    color: white;
+    padding: 12px 28px;
+    border: none;
+    border-radius: 6px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.2s;
+}
+
+#retryBtn:hover {
+    background-color: #193f1b;
 }

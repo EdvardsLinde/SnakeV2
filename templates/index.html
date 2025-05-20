@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
     <title>Čūskas spēle</title>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
@@ -10,7 +11,7 @@
   <canvas id="gameCanvas" width="410" height="410"></canvas>
   <p id="score">Rezultāts: 0</p>
   <p id="gameOverMsg"></p>
-  <button id="retryBtn" onclick="restartGame()">Spēli no jauna</button>
+  <button id="retryBtn" onclick="restartGame()">Spēlē no jauna!</button>
   <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 </html>

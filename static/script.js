@@ -5,7 +5,7 @@ const box = 20;
 const canvasSize = 400;
 
 let snake = [{ x: 160, y: 160 }];
-let directions = "RIGH";
+let direction = "RIGHT";
 let food = spawnFood();
 let score = 0;
 let gameOver = false;
@@ -15,12 +15,12 @@ document.addEventListener("keydown", changeDirection);
 function draw() {
     if (gameOver) return;
 
-    ctx.clearReact(0, 0, canvasSize, canvasSize);
+    ctx.clearRect(0, 0, canvasSize, canvasSize);
 
     // Uzzīmē čūsku
     ctx.fillStyle = "lime";
     snake.forEach((segment) => {
-        ctx.fillRect(segment.x, segment, segment.y, box, box);
+        ctx.fillRect(segment.x, segment.y, box, box);
     });
 
     // Uzzīmē ēdienu
@@ -74,3 +74,13 @@ function changeDirection(event) {
 
 // Atkārto zīmēšanas funkciju ik pēc 150ms
 setInterval(draw, 150);
+
+function restartGame() {
+    snake = [{ x: 160, y: 160 }];
+    direction = "RIGHT";
+    food = spawnFood();
+    score = 0;
+    gameOver = false;
+    document.getElementById("score").textContent = "Rezultāts: 0";
+    document.getElementById("gameOverMsg").textContent = "";
+}
