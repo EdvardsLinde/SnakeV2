@@ -1,17 +1,23 @@
 <!DOCTYPE html>
+
 <html lang="lv">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Čūskas spēle</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
 </head>
+
 <body>
+
   <h1>Čūskas spēle</h1>
   <canvas id="gameCanvas" width="410" height="410"></canvas>
   <p id="score">Rezultāts: 0</p>
   <p id="gameOverMsg"></p>
   <button id="retryBtn" onclick="restartGame()">Spēli no jauna</button>
   <script src="{{ url_for('static', filename='script.js') }}"></script>
+
 </body>
+
 </html>
