@@ -3,10 +3,16 @@
 <html lang="lv">
 
 <head>
+  <meta charset="UTF-8">
+    <title>Čūskas spēle</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 
 <body>
 
+ <h1>Čūskas spēle</h1>
+    <canvas id="gameCanvas" width="400" height="400"></canvas>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
 
 </body>
 
