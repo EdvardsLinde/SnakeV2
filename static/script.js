@@ -73,4 +73,3 @@ function changeDirection(event) {
 
 
 // Atkārto zīmēšanas funkciju ik pēc 150ms
-setInterval(draw, 150);
